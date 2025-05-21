@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Mehedi Hasan Tanvir - Portfolio</title>
     <style>
         /* Reset and Base Styles */
@@ -117,9 +117,16 @@
         }
 
         .hero-image img {
-            max-width: 100%;
-            border-radius: 10px;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.05);
         }
 
         .btn {
@@ -224,95 +231,16 @@
         }
 
         .about-image img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Work/Portfolio Section */
-        .work {
-            background-color: #f1f5f9;
-        }
-
-        .portfolio-filter {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 40px;
-        }
-
-        .filter-btn {
-            background: none;
-            border: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            cursor: pointer;
-            font-weight: 500;
-            color: #7f8c8d;
-            transition: all 0.3s;
-        }
-
-        .filter-btn.active, .filter-btn:hover {
-            color: #3498db;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .portfolio-item {
-            background-color: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-10px);
-        }
-
-        .portfolio-img {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .portfolio-img img {
-            width: 100%;
-            height: 100%;
+            width: 300px;
+            height: 300px;
             object-fit: cover;
-            transition: transform 0.5s;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease;
         }
 
-        .portfolio-item:hover .portfolio-img img {
-            transform: scale(1.1);
-        }
-
-        .portfolio-info {
-            padding: 20px;
-        }
-
-        .portfolio-info h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
-
-        .portfolio-info p {
-            color: #7f8c8d;
-            margin-bottom: 15px;
-        }
-
-        .portfolio-info a {
-            display: inline-block;
-            color: #3498db;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .portfolio-info a:hover {
-            color: #2980b9;
+        .about-image img:hover {
+            transform: scale(1.05);
         }
 
         /* Contact Section */
@@ -396,7 +324,7 @@
             font-size: 14px;
         }
 
-        /* Responsive Styles */
+        /* Responsive */
         @media (max-width: 992px) {
             .hero-content, .about-content {
                 flex-direction: column;
@@ -429,7 +357,6 @@
             .portfolio-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             }
-
         }
     </style>
 </head>
@@ -459,8 +386,7 @@
                     <a href="#work" class="btn">View My Work</a>
                 </div>
                 <div class="hero-image">
-                    <!-- In both Hero and About sections -->
-                     <img src="portfolio/images/profile.jpg.JPG" alt="Mehedi Hasan Tanvir">
+                    <img src="portfolio/images/profile.jpg.JPG" alt="Mehedi Hasan Tanvir">
                 </div>
             </div>
         </div>
@@ -477,54 +403,32 @@
                     <h3>I'm a Web Developer & Video Editor</h3>
                     <p>I specialize in creating responsive websites and professional video content. With skills in both development and editing, I can bring complete digital projects to life from concept to final product.</p>
                     <p>My approach combines technical precision with creative flair, ensuring that every project I work on is both functional and visually appealing.</p>
-                    
+
                     <div class="skills">
                         <div class="skill-item">
-                            <div class="skill-name">
-                                <span>HTML/CSS</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%;"></div>
-                            </div>
+                            <div class="skill-name"><span>HTML/CSS</span><span>80%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-name">
-                                <span>Premiere Pro</span>
-                                <span>75%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%;"></div>
-                            </div>
+                            <div class="skill-name"><span>Premiere Pro</span><span>75%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-name">
-                                <span>JavaScript</span>
-                                <span>70%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%;"></div>
-                            </div>
+                            <div class="skill-name"><span>JavaScript</span><span>70%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 70%;"></div></div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-name">
-                                <span>After Effects</span>
-                                <span>65%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 65%;"></div>
-                            </div>
+                            <div class="skill-name"><span>After Effects</span><span>65%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 65%;"></div></div>
                         </div>
                     </div>
                 </div>
                 <div class="about-image">
-                    
+                    <img src="portfolio/images/profile.jpg.JPG" alt="Mehedi Hasan Tanvir">
                 </div>
             </div>
         </div>
     </section>
-
-   
 
     <!-- Contact Section -->
     <section class="section" id="contact">
